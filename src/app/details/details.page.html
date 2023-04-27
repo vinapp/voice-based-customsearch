@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary" class="app-toolbar">
+    <ion-item class="transparent" lines="none">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/tab1">back</ion-back-button>
+        <ion-label class="app-header">
+          Details
+        </ion-label>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <!-- <ion-button color="dark" (click)="ShareGeneric('text', placeDetailsPageLink)"> -->
+        <ion-button color="dark" (click)="ShareGeneric('text', placeDetailsPageLink)">
+          <ion-icon color="dark" name="share-social-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <iframe #someInput data-tap-disabled="true" style="height:100%;width:100%;border:none;font-size: 0.9rem;" [src]="safeUrl" allowfullscreen> </iframe>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "voice-based-customsearch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

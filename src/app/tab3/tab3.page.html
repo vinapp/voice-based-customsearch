@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Voice Search
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Voice Search</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+  <ion-searchbar placeholder="Search" [(ngModel)]="searchTerm"/>
+  <div class="ion-text-center">
+    <ion-button (click)="getWikiDummyData()">Search</ion-button>
+  </div>
+  <ion-button expand="full" (click)="startStopSpeak($event)" [color]="buttonColor">
+    <ion-icon></ion-icon>
+    start/stop
+  </ion-button>
+  <!-- <div lass="container">
+    <ion-list *ngIf="isItemAvailable" class="ion-no-padding">
+      <ion-item class="normal-font" color="secondary" *ngFor="let item of recentTempSearches">
+        <ion-label>{{ item }}</ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end" (click)="submit(item)"></ion-icon>
+        <ion-icon name="close-circle-sharp" slot="start" (click)="remove(item)"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div> -->
+  <!-- <div class="ion-text-center">
+    <ion-button (click)="getWikiData()">Fetch GeoLocation Data</ion-button>
+  </div> -->
+  
+  <div ui-view="details" id="map" class="map" style="height: 100%; width: 100%; background-color: #ffffff;">
+    <div id="popup"></div>
+  </div>
+ 
+</ion-content>
